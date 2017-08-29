@@ -1,3 +1,26 @@
+##Apps creation
+
+```bash
+create-react-app react-redux-example
+cd react-redux-example
+```
+## Add Redux
+
+```bash
+yarn add redux react-redux react-router-dom react-router-redux@next redux-thunk
+
+```
+or 
+```bash
+npm install --save redux react-redux react-router-dom react-router-redux@next redux-thunk
+
+```
+
+## const vs let vs var
+Use const (can be change)
+then let
+somehow var
+
 yarn install
 npm install
 
