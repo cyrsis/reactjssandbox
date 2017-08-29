@@ -1,6 +1,21 @@
+//ES5
+// var React = require('react');
+//var MyComponent = require('./MyComponent');
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+// ES5
+// var Photo = React.createClass({
+//     render: function() {
+//         return (
+//             <div>
+//                 <images alt={this.props.description} src={this.props.src} />
+//             </div>
+//         );
+//     }
+// });
+// ReactDOM.render(<Photo />, document.getElementById('main'));
 
 class App extends Component {
   render() {
@@ -19,3 +34,5 @@ class App extends Component {
 }
 
 export default App;
+//ES5
+//module.exports = MyComponent;
