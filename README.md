@@ -1,3 +1,10 @@
+## Login with Firebase
+
+https://demo.react-redux-firebase.com/projects
+
+https://github.com/prescottprue/react-redux-firebase/tree/master/examples/complete/material
+http://docs.react-redux-firebase.com/history/v2.0.0/
+
 ## Esline someday
 
 https://stackoverflow.com/questions/34700062/intellij-plugin-airbnb-eslint-w-react
