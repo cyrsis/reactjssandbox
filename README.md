@@ -1,3 +1,16 @@
+yarn install
+npm install
+
+yarn add 
+npm install -s
+
+yarn start
+npm start
+
+var const let
+
+var can be hoisted -> variable can be at the bottom, rest of them dont
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
