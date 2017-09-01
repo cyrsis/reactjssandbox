@@ -1,4 +1,15 @@
+
+## Clean npm
+
+```bash
+ npm cache clean
+```
+ 
 ## Login with Firebase
+
+Probably a better idea with Firebase
+
+https://github.com/tylermcginnis/re-base
 
 https://demo.react-redux-firebase.com/projects
 
