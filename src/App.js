@@ -18,8 +18,14 @@ import './App.css';
 // ReactDOM.render(<Photo />, document.getElementById('main'));
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state ={
+            list: [1,2,3]
+        }
+    }
   render() {
-    return (
+      return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
