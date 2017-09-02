@@ -1,4 +1,19 @@
 
+## Functiona Library
+underscore
+loadash
+
+## For React Native
+
+$ react-native install @shoutem/ui
+$ react-native install firebase
+$ react-native install moment
+$ react-native install redux
+$ react-native install redux-thunk
+$ react-native install redux-logger
+$ react-native install 
+$ react-native-keyboard-aware-scroll-view
+
 ## Clean npm
 
 ```bash
@@ -30,6 +45,12 @@ http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%
 ```bash
 create-react-app reactjssandbox
 cd react-redux-example
+```
+
+## run 
+
+```bash
+npm test
 ```
 ## Add Redux
 
