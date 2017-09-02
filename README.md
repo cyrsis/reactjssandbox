@@ -68,6 +68,12 @@ Optional
 ```bash
 npm install -- save react-bootstrap react-router lodash Reflux superagent  react-router-bootstrap
 ```
+For my Good Friend Intellij
+
+```bash
+npm install --save @types/react
+```
+
 ## const vs let vs var
 Use const (can be change)
 then let

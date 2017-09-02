@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {TodoForm, TodoList} from "./components";
-
 // ES5
 // var Photo = React.createClass({
 //     render: function() {
@@ -49,16 +48,7 @@ class App extends Component {
 
             <TodoForm HandleInputChange={this.HandleInputChange}
             currentTodo={this.state.currentTodo}/>
-            <TodoList/>
-            <div className="ToDo-list">
-                <ul>
-                    {this.state.todos.map(todos =>
-                        <li key={todos.id}>
-                            <input type="checkBox" defaultChecked={todos.iscomplete}/>
-                        {todos.name}
-                        </li>)}
-                </ul>
-            </div>
+            <TodoList todos={this.state.todos}/>
         </div>
       </div>
     );
