@@ -1,8 +1,31 @@
 
+## Library I can use today
+
+http://www.material-ui.com/#/
+
+https://react-bootstrap.github.io/getting-started.html
+
+http://blueprintjs.com/
+
+https://github.com/airbnb/react-dates
+
+https://griddlegriddle.github.io/Griddle/
+
+https://lernajs.io/
+## why we need proptypes
+
+if someone else use my componet, I have to make sure props are correct
+For the vailation
+
 ## Functiona Library
 underscore
 loadash
 
+Fine, I am sold,
+ ?  Replace if else
+ map Replace forloop
+ --Maybe RxJx can do hell lot more
+ 
 ## For React Native
 
 $ react-native install @shoutem/ui

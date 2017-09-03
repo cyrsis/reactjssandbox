@@ -12,5 +12,10 @@ export const TodoItem = (props) => {
         </div>
     )
 }
-
+//
+// TodoItem.propTypes ={
+//   name: React.PropTypes.string.isRequired,
+//   iscomplete: React.PropTypes.bool,
+//     id: React.PropTypes.number.isRequired
+// }
 
