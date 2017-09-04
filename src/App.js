@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {TodoForm, TodoList} from "./components";
+import { addTodo, generatedId } from "./lib/todoHelpers";
 // ES5
 // var Photo = React.createClass({
 //     render: function() {
@@ -30,12 +31,25 @@ class App extends Component {
             currentTodo:''
         }
         this.HandleInputChange= this.HandleInputChange.bind(this)
+        this.HandleSubmit= this.HandleSubmit.bind(this)
     }
 
     HandleInputChange(evt) {
         this.setState({
             currentTodo:evt.target.value,
         });
+    }
+
+    HandleSubmit(evt){
+        evt.preventDefault() //prevent to make GET
+        const newId = generatedId()
+        const newTodo = {id: newId,name : this.state.currentTodo,iscomplete :false}
+           const updatedTodos= addTodo(this.state.todos,newTodo )
+        this.setState({
+            todos:updatedTodos,
+            currentTodo:''
+        });
+
     }
   render() {
       return (
@@ -45,9 +59,12 @@ class App extends Component {
           <h2>React Todos</h2>
         </div>
         <div className="Todo-App">
+            <TodoForm
+                HandleInputChange={this.HandleInputChange}
+            currentTodo={this.state.currentTodo}
 
-            <TodoForm HandleInputChange={this.HandleInputChange}
-            currentTodo={this.state.currentTodo}/>
+                HandleSubmit={this.HandleSubmit}
+            />
             <TodoList todos={this.state.todos}/>
         </div>
       </div>
