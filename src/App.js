@@ -41,7 +41,7 @@ class App extends Component {
         });
     }
 
-    HandleSubmit =(evt) => { //ES6 syntax remove binding
+    HandleSubmit =(evt) => { //ES6 syntax remove binding and set it as properties ->  ES2016 Property Initializer Syntax
         evt.preventDefault() //prevent to make GET
         const newId = generatedId()
         const newTodo = {id: newId, name: this.state.currentTodo, iscomplete: false}
