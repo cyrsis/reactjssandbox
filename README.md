@@ -1,4 +1,15 @@
+## Webpack
 
+It save everyones ass so we dont have to manually do binding with different npm package
+
+### no file scope -> modules scope 
+### break code up
+### scipt have to be in linearly way
+
+## Barbel
+
+ES6 to JS 
+because ES6 cannt run in most brower
 ## Library I can use today
 
 http://www.material-ui.com/#/
