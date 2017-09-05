@@ -71,7 +71,6 @@ test('toggleTodo should not mutate the orginal todo', () => {
         {id: 1, name: 'one', isComplete: false}
 
 
-
     const expected =
         {id: 1, name: 'one', isComplete: true}
 
@@ -80,6 +79,7 @@ test('toggleTodo should not mutate the orginal todo', () => {
 
     expect(result).not.toBe(startTodos)
 })
+//This is call update a list without Mutation
 
 test('updateTodo should update an item by id', () => {
     const startTodos = [
@@ -110,7 +110,7 @@ test('UpdateTodo shold not mutate the orginal array', () => {
 
     const updatedTodo = {id: 2, name: 'two', isComplete: true}
 
-        const result = updateTodo(startTodos, updatedTodo)
+    const result = updateTodo(startTodos, updatedTodo)
 
     expect(result).not.toBe(startTodos)
 })
