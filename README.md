@@ -1,3 +1,9 @@
+## Current working on
+
+https://medium.com/@taweesoft
+## Bootstrap template
+
+https://startbootstrap.com/template-categories/all/
 ## Webpack
 
 It save everyones ass so we dont have to manually do binding with different npm package
