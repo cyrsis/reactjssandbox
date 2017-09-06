@@ -5,8 +5,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { TodoForm, TodoList } from "./components";
-import { addTodo, findById, generatedId, toggleTodo, updateTodo } from "./lib/todoHelpers";
+import { addTodo, findById, generatedId, toggleTodo, updateTodo , removeTodo } from "./lib/todoHelpers";
 import Terrain from 'react-icons/lib/md/terrain'
+import { partial, pipe  } from "./lib/utils";
 // ES5
 // var Photo = React.createClass({
 //     render: function() {
@@ -36,23 +37,25 @@ class App extends Component {
     //     // this.HandEmptySubmit=this.HandEmptySubmit.bind(this)
     // }
 
-    HandleInputChange =(evt) => {
+    HandleInputChange = (evt) => {
         this.setState({
             currentTodo: evt.target.value,
         });
     }
 
-    handleToggle =(id) =>{
-        const todo = findById(id, this.state.todos)
-        const toggled = toggleTodo(todo)
-        const updatedTodos = updateTodo(this.state.todos,toggled)
+    handleToggle = (id) => {
+        const getUpdateTodos = pipe(findById, toggleTodo, partial(updateTodo, this.state.todos));
+        // const todo = findById(id, this.state.todos)
+        // const toggled = toggleTodo(todo)
+        const updatedTodos = getUpdateTodos(id, this.state.todos)
+
         this.setState({
-            todos:updatedTodos,
+            todos: updatedTodos,
         });
 
     }
 
-    HandleSubmit =(evt) => { //ES6 syntax remove binding and set it as properties ->  ES2016 Property Initializer Syntax
+    HandleSubmit = (evt) => { //ES6 syntax remove binding and set it as properties ->  ES2016 Property Initializer Syntax
         evt.preventDefault() //prevent to make GET
         const newId = generatedId()
         const newTodo = {id: newId, name: this.state.currentTodo, iscomplete: false}
@@ -60,24 +63,24 @@ class App extends Component {
         this.setState({
             todos: updatedTodos,
             currentTodo: '',
-            errorMessage:''
+            errorMessage: ''
         });
     }
 
-    HandEmptySubmit=(evt)=>{
+    HandEmptySubmit = (evt) => {
         evt.preventDefault()
         this.setState({
-            errorMessage:'Please supply a todo name',
+            errorMessage: 'Please supply a todo name',
         });
 
     }
 
     render() {
-        const submitHandler = this.state.currentTodo ? this.HandleSubmit:this.HandEmptySubmit;
+        const submitHandler = this.state.currentTodo ? this.HandleSubmit : this.HandEmptySubmit;
         return (
             <div className="App">
                 <div className="App-header">
-                    <Terrain />
+                    <Terrain/>
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2>React Todos</h2>
                 </div>
