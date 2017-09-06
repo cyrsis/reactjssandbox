@@ -1,4 +1,6 @@
-//Just use const
+//Just use const by default
+// let if rebinding is needed
+//var should be never
 
 //const is block scope
 //let is block scope
