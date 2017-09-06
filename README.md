@@ -1,3 +1,5 @@
+
+
 ## Transform from create class
 
 Migrating from React.createClass
@@ -59,6 +61,9 @@ It save everyones ass so we dont have to manually do binding with different npm 
 ES6 to JS 
 because ES6 cannt run in most brower
 ## Library I can use today
+
+#Live Server (Get you up and running)
+npm install -g live-server
 
 http://gorangajic.github.io/react-icons/md.html
 
