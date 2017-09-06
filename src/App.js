@@ -6,6 +6,7 @@ import logo from './logo.svg';
 import './App.css';
 import { TodoForm, TodoList } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo } from "./lib/todoHelpers";
+import Terrain from 'react-icons/lib/md/terrain'
 // ES5
 // var Photo = React.createClass({
 //     render: function() {
@@ -76,6 +77,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-header">
+                    <Terrain />
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2>React Todos</h2>
                 </div>

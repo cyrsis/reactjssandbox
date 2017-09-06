@@ -1,3 +1,45 @@
+## Transform from create class
+
+Migrating from React.createClass
+When React was initially released, there was no idiomatic way to create classes in JavaScript, so we provided our own: React.createClass.
+
+Later, classes were added to the language as part of ES2015, so we added the ability to create React components using JavaScript classes. Along with functional components, JavaScript classes are now the preferred way to create components in React.
+
+For your existing createClass components, we recommend that you migrate them to JavaScript classes. However, if you have components that rely on mixins, converting to classes may not be immediately feasible. If so, create-react-class is available on npm as a drop-in replacement:
+
+// Before (15.4 and below)
+var React = require('react');
+
+var Component = React.createClass({
+  mixins: [MixinA],
+  render() {
+    return <Child />;
+  }
+});
+
+// After (15.5)
+var React = require('react');
+var createReactClass = require('create-react-class');
+
+var Component = createReactClass({
+  mixins: [MixinA],
+  render() {
+    return <Child />;
+  }
+});
+Your components will continue to work the same as they did before.
+
+The codemod for this change attempts to convert a createClass component to a JavaScript class, with a fallback to create-react-class if necessary. It has converted thousands of components internally at Facebook.
+
+Basic usage:
+
+jscodeshift -t react-codemod/transforms/class.js path/to/components 0
+
+## need the part from here
+
+
+https://react.parts/native
+
 ## Current working on
 
 https://medium.com/@taweesoft
@@ -17,6 +59,8 @@ It save everyones ass so we dont have to manually do binding with different npm 
 ES6 to JS 
 because ES6 cannt run in most brower
 ## Library I can use today
+
+http://gorangajic.github.io/react-icons/md.html
 
 http://www.material-ui.com/#/
 
@@ -100,6 +144,7 @@ npm test
 ```
 ## Add Redux
 
+Redux is like a bank that keep track of state. I can do it with redius
 
 ```bash
 yarn add redux react-redux react-router-dom react-router-redux@next redux-thunk
