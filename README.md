@@ -35,8 +35,13 @@ if someone else use my componet, I have to make sure props are correct
 For the vailation
 
 ## Functiona Library
-underscore
-loadash
+(Partial function)
+Unders core
+http://underscorejs.org/#partial
+Ramda http://ramdajs.com/0.17/docs/#partial
+Lodash
+https://lodash.com/docs/4.17.4#partial
+
 
 Fine, I am sold,
  ?  Replace if else

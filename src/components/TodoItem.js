@@ -1,12 +1,14 @@
 import React from 'react'
+import { partial } from "../lib/utils";
 
 //Stateless Components
 
 export const TodoItem = (props) => {
+    const handleToggle = partial(props.handleToggle,props.id)
     return (
         <div>
             <li>
-                <input type="checkBox" defaultChecked={props.iscomplete}/>
+                <input type="checkBox" onChange={handleToggle} checked={props.isComplete}/>
                 {props.name}
             </li>
         </div>

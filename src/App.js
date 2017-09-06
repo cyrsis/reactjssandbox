@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { TodoForm, TodoList } from "./components";
-import { addTodo, generatedId } from "./lib/todoHelpers";
+import { addTodo, findById, generatedId, toggleTodo, updateTodo } from "./lib/todoHelpers";
 // ES5
 // var Photo = React.createClass({
 //     render: function() {
@@ -21,9 +21,9 @@ import { addTodo, generatedId } from "./lib/todoHelpers";
 class App extends Component {
     state = {
         todos: [
-            {id: 1, name: "Learn Jsx", iscomplete: true},
-            {id: 2, name: "Build Awesome Apps", iscomplete: false},
-            {id: 3, name: "Ship it", iscomplete: false}
+            {id: 1, name: "Learn Jsx", isComplete: true},
+            {id: 2, name: "Build Awesome Apps", isComplete: false},
+            {id: 3, name: "Ship it", isComplete: false}
         ],
         currentTodo: ''
     }
@@ -39,6 +39,16 @@ class App extends Component {
         this.setState({
             currentTodo: evt.target.value,
         });
+    }
+
+    handleToggle =(id) =>{
+        const todo = findById(id, this.state.todos)
+        const toggled = toggleTodo(todo)
+        const updatedTodos = updateTodo(this.state.todos,toggled)
+        this.setState({
+            todos:updatedTodos,
+        });
+
     }
 
     HandleSubmit =(evt) => { //ES6 syntax remove binding and set it as properties ->  ES2016 Property Initializer Syntax
@@ -77,7 +87,7 @@ class App extends Component {
 
                         HandleSubmit={submitHandler}
                     />
-                    <TodoList todos={this.state.todos}/>
+                    <TodoList handleToggle={this.handleToggle} todos={this.state.todos}/>
                 </div>
             </div>
         );

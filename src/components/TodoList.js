@@ -9,7 +9,7 @@ export const TodoList = (props) =>  {
            <div className="ToDo-list">
                <ul>
                    {props.todos.map(todos =>
-                       <TodoItem key={todos.id}{...todos}/>)}
+                       <TodoItem handleToggle={props.handleToggle}key={todos.id}{...todos}/>)}
 
                </ul>
            </div>
