@@ -36,9 +36,10 @@ For the vailation
 
 ## Functiona Library
 (Partial function)
+Ramda (learn this first) http://ramdajs.com/0.17/docs/#partial
 Unders core
 http://underscorejs.org/#partial
-Ramda http://ramdajs.com/0.17/docs/#partial
+
 Lodash
 https://lodash.com/docs/4.17.4#partial
 

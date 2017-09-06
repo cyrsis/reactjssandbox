@@ -1,7 +1,13 @@
-import {partial} from './utils'
-
+import {partial ,pipe} from './utils'
+//here is the work need to be
+//Done for partial function
+//and pipline function
 const add = (a,b) => a+b
 const addThree =(a,b,c) => a+b+c
+
+const inc = (num) => num + 1
+const dbl = (num) => num * 2
+
 
 test('partial applies the first argument ahead of the time', () => {
     const inc = partial(add, 1)
@@ -16,4 +22,28 @@ test('partial applies the mutliple argument ahead of the time', () => {
     const inc = partial(addThree, 1,3)
     const result = inc(2)
     expect(result).toBe(6)
+})
+
+test('pipe passes the result of inc to dbl', () => {
+    const pipeline = pipe(inc, dbl)
+    // => db1(inc(2)) OR g(f(...args))
+    const result = pipeline(2)
+
+    expect(result).toBe(6)
+})
+
+test('pipe passes the result of dbl to inc', () => {
+    const pipeline = pipe(inc, dbl)
+    // => inc(dbl(2))
+    const result = pipeline(2)
+
+    expect(result).toBe(6)
+})
+
+test('pipe works with more than 2 functions', () => {
+    const pipeline = pipe(add,inc, dbl,inc)
+    // => inc(dbl(2))
+    const result = pipeline(1,2)
+
+    expect(result).toBe(9)
 })
