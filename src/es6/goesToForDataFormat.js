@@ -17,3 +17,4 @@ const win = winner.map((winner, i) => ({
 console.log(win)
 
 //Type win in the chrome can show the object 's value
+//Type console.table(win) to get the most out of it
