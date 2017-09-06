@@ -8,6 +8,7 @@ const db = {
     race: '100m Dash'
 }
 
+//Add ( to return a object , remove {} so I can have implicit return
 const win = winner.map((winner, i) => ({
     name: winner,
         race:race,
