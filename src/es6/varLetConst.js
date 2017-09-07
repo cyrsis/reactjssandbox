@@ -13,5 +13,7 @@ if (age >18) {
 }
 //var is global
 
+// var can be hoisted -> variable can be at the bottom, rest of them dont
+
 
 
