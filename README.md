@@ -1,4 +1,6 @@
 
+
+
 ## Package.config can do for uis is run task
 
 ## Note for barbel is that should not do multiple version at the same time
@@ -71,6 +73,27 @@ because ES6 cannt run in most chrome and IE
 
 ## Library I can use today
 
+ Ant Design of React - Ant Design
+ TouchstoneJS - React.js powered UI framework for developing beautiful hybrid mobile apps.
+ Elemental UI
+ RSuite | 一个基于 React.js 的 Web 组件库
+ Material-UI
+ React-Bootstrap
+ React + Foundation · Foundation as React components
+ Essence - React Material Design Framework
+ React-MDL: React Components for Material Design Lite
+ Belle - Configurable React Components with great UX
+ MUI - Material Design CSS Framework
+ Grommet
+ React Toolbox
+ react-blazecss 0.4.3 Demo
+ Pivotal UI: Intro
+ BFD UI
+ Semantic UI React
+ Amaze UI React - Amaze UI components build with React
+ Blueprint – A React UI toolkit for the web
+归档至：
+
 #Live Server (Get you up and running)
 npm install -g live-server
 
@@ -88,6 +111,12 @@ https://griddlegriddle.github.io/Griddle/
 
 https://lernajs.io/
 
+## Why react?
+one way data flow structure
+-> React do the same thing with 2 way binding with 
+  State (Change in state,react would get render done for me) 
+  Props (Pass into sub component)
+  
 ## why we need proptypes
 
 if someone else use my componet, I have to make sure props are correct
@@ -109,6 +138,32 @@ Fine, I am sold,
  --Maybe RxJx can do hell lot more
  
 ## For React Native
+
+The best Ui
+https://github.com/akveo/kittenTricks
+
+### Demo Apps
+
+https://github.com/fbsamples/f8app
+
+https://github.com/iSimar/HackerNews-React-Native
+
+https://github.com/FaridSafi/react-native-gifted-chat
+messager
+
+
+Stock Apps
+https://github.com/7kfpun/FinanceReactNative
+
+Camera
+https://github.com/lwansbrough/react-native-camera
+
+NBA
+https://github.com/wwayne/react-native-nba-app
+
+500px
+http://isomorphic500.herokuapp.com/featured/upcoming
+
 
 $ react-native install @shoutem/ui
 $ react-native install firebase
