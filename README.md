@@ -1,3 +1,4 @@
+
 ## Package can do for uis is run task
 ## Note for barbel is that should not do multiple version at the same time
 ## Nodjs is Wrapper for V8 Google engin
@@ -61,7 +62,8 @@ It save everyones ass so we dont have to manually do binding with different npm 
 
 ## Barbel
 
-ES6 to JS 
+ES6 to JS(ES5) 
+-> Need Polyfill or transpilers (barbel this case)
 because ES6 cannt run in most brower
 ## Library I can use today
 
