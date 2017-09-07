@@ -12,10 +12,11 @@ const db = {
 const win = winner.map((winner, i) => ({
     name: winner,
         race:race,
-        place:i
+        place:i+1
 }))
 
-console.log(win)
+ console.log(win)
+// console.table(win)
 
 //Type win in the chrome can show the object 's value
 //Type console.table(win) to get the most out of it
