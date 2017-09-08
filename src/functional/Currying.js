@@ -1,8 +1,9 @@
+
 function add(a,b,c) {
     return a+b+c
 }
 
-function curriedAdd(a){
+function curriedAdd(a){  //Composition is like this, function take other function
     return function (b) {
         return function(c) {
             return a +b +c //a+ b is retained via function closure
