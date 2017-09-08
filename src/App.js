@@ -2,12 +2,19 @@
 // var React = require('react');
 //var MyComponent = require('./MyComponent');
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import { TodoForm, TodoList } from "./components";
-import { addTodo, findById, generatedId, toggleTodo, updateTodo , removeTodo } from "./lib/todoHelpers";
+import { TodoForm, TodoList , Home , About, Topics } from "./components";
+import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
 import Terrain from 'react-icons/lib/md/terrain'
-import { partial, pipe  } from "./lib/utils";
+import { partial, pipe } from "./lib/utils";
+
+
 // ES5
 // var Photo = React.createClass({
 //     render: function() {
@@ -75,10 +82,28 @@ class App extends Component {
 
     }
 
+
+
     render() {
         const submitHandler = this.state.currentTodo ? this.HandleSubmit : this.HandEmptySubmit;
         return (
+
             <div className="App">
+                <Router>
+                    <div>
+                        <ul>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/topics">Topics</Link></li>
+                        </ul>
+
+                        <hr/>
+
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/topics" component={Topics}/>
+                    </div>
+                </Router>
                 <div className="App-header">
                     <Terrain/>
                     <img src={logo} className="App-logo" alt="logo"/>
@@ -94,6 +119,8 @@ class App extends Component {
                     />
                     <TodoList handleToggle={this.handleToggle} todos={this.state.todos}/>
                 </div>
+
+
             </div>
         );
     }
