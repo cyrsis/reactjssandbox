@@ -1,3 +1,5 @@
+
+
 ## To do
 1. Work on the Router 
 
@@ -169,6 +171,17 @@ https://github.com/wwayne/react-native-nba-app
 500px
 http://isomorphic500.herokuapp.com/featured/upcoming
 
+## Why Redux Sage
+LOOK PERFECT for for my do promise and async request
+ -- Library to get things done
+ -- Redux Middleware
+ -- More sophisticated thn redux-thunk
+ -- Manges side-effects
+ -- Depends on ES6 and Yield
+ -- Consumes and demits actions
+ 
+ 
+ 
 ## Why redux
 
 Single store for every state
@@ -178,7 +191,8 @@ Immutable Store
     enables 
     Hot Reloading
     Time-Travel debugging
-Small 2Ks    
+Small 2Ks
+    
 $ react-native install @shoutem/ui
 $ react-native install firebase
 $ react-native install moment
