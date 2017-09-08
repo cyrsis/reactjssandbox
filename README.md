@@ -1,5 +1,7 @@
 
+## This guy is perfect
 
+https://medium.com/@housecor
 
 ## Package.config can do for uis is run task
 
@@ -58,6 +60,7 @@ https://medium.com/@taweesoft
 https://startbootstrap.com/template-categories/all/
 ## Webpack
 
+- So powerful that i dont need Glup anymore
 It save everyones ass so we dont have to manually do binding with different npm package
 and it enable soruce contril
 
@@ -164,7 +167,16 @@ https://github.com/wwayne/react-native-nba-app
 500px
 http://isomorphic500.herokuapp.com/featured/upcoming
 
+## Why redux
 
+Single store for every state
+Reduce Boilderplate
+Isomorphic/Universal Friendly
+Immutable Store 
+    enables 
+    Hot Reloading
+    Time-Travel debugging
+Small 2Ks    
 $ react-native install @shoutem/ui
 $ react-native install firebase
 $ react-native install moment
