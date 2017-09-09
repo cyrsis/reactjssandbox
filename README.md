@@ -82,7 +82,26 @@ because ES6 cannt run in most chrome and IE
 -> Default props declared seperately
 -> Set initial state in constructor
 
+ES6 stateless benenfit (use whenever possible)
+-> No Class needed, less noise
+-> Avoid this keyword
+-> Enforced best -> only take care the render, the state would be in Redux
+-> Do not support lifecycle methods
 
+##           Es6 Class Components vs Stateless Components
+local state                    | Everything else
+Refs of underlying dom         |
+willMount, lifecyclehook       |
+Child function(nested function)
+for performance                |
+
+## Other ways to Create Components
+object.create
+Mixins
+Parasitic Components
+Stampit
+
+bit.ly/react-define-component
 ## Library I can use today
 
  Ant Design of React - Ant Design
