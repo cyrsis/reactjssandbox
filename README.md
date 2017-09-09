@@ -77,6 +77,11 @@ and it enable soruce contril
 ES6 to JS(ES5) 
 -> Need Polyfill or transpilers (barbel this case)
 because ES6 cannt run in most chrome and IE
+-> No Auto Bind  do .bind in constructor
+-> PropTypes decleared seperately
+-> Default props declared seperately
+-> Set initial state in constructor
+
 
 ## Library I can use today
 
@@ -173,14 +178,24 @@ http://isomorphic500.herokuapp.com/featured/upcoming
 
 ## Why Redux Sage
 LOOK PERFECT for for my do promise and async request
- -- Library to get things done
+ -- listens for actions and dispatch other actions(using effect)
  -- Redux Middleware
  -- More sophisticated thn redux-thunk
  -- Manges side-effects
  -- Depends on ES6 and Yield
- -- Consumes and demits actions
- 
- 
+ -- Consumes and emits actions
+ -- Works without Redux
+ -- Effective for async operations
+ -- A long-running background process
+ -- Responsible for application's side effect
+ -- Responsible for application's side effect
+ -- Yield conjunction with ES6 Yield
+
+## Redux Thunk vs Redux Saga
+by Redux Creator vs Third part developer
+Runs in JS       vs ES6 only
+No Build in Async vs Yield
+side-effect vs use EFFECTS
  
 ## Why redux
 
