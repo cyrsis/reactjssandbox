@@ -11,7 +11,6 @@ import logo from './logo.svg';
 import './App.css';
 import { TodoForm, TodoList , Home , About, Topics } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
-import Terrain from 'react-icons/lib/md/terrain'
 import { partial, pipe } from "./lib/utils";
 
 
@@ -88,6 +87,7 @@ class App extends Component {
         const submitHandler = this.state.currentTodo ? this.HandleSubmit : this.HandEmptySubmit;
         return (
 
+
             <div className="App">
                 <Router>
                     <div>
@@ -104,8 +104,11 @@ class App extends Component {
                         <Route path="/topics" component={Topics}/>
                     </div>
                 </Router>
+
+
+
+
                 <div className="App-header">
-                    <Terrain/>
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2>React Todos</h2>
                 </div>
@@ -118,6 +121,16 @@ class App extends Component {
                         HandleSubmit={submitHandler}
                     />
                     <TodoList handleToggle={this.handleToggle} todos={this.state.todos}/>
+                </div>
+
+                <div className="form-inline">
+                    <div className="form-group">
+                        <input type="text" className="form-control" placeholder="I have to..."/>
+                        <button type="button"
+                        className="btn btn-success">
+                        Add Reminder
+                        </button>
+                    </div>
                 </div>
 
 

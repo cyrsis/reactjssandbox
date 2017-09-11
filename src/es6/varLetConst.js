@@ -15,5 +15,15 @@ if (age >18) {
 
 // var can be hoisted -> variable can be at the bottom, rest of them dont
 
+let updateFunction =[]
+
+for (let i = 0; i<2; i++)
+{
+    updateFunction.push(function () {
+       return i;
+    })
+}
+console.log(updateFunction[0]()) // 0 for Closure, make sure use let
+
 
 

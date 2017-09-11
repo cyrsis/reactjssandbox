@@ -24,7 +24,7 @@ function curry(fn) {
                 return curried.apply(null, args.concat(rest));
             };
     };
-}
+    }
 
 var curriedAdd = curry(add);
 console.log(curriedAdd(1)(2)(3));

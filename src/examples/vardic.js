@@ -10,7 +10,7 @@ function testvardics(name,...args) //With this can do sort, map
     console.log(name,args)
 }
 
-testvardics('Victor',1,2,3)
+testvardics('Victor',1,2,3) //[1,2,3]
 
 var args = [1,2,3]
 

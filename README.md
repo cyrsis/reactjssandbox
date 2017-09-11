@@ -100,8 +100,20 @@ object.create
 Mixins
 Parasitic Components
 Stampit
-
 bit.ly/react-define-component
+
+
+##                Container vs Presentation
+       Little to no markup    
+       Redux.connect stateful| Nearly all markup
+ Pass data and action  down  |Recive data and actions via props
+ Knows Redux                 | Doesnt know about Redux
+ Often stateful              | Typically functional components
+
+## when Container?
+When you notice that some component doesnt use props they recieve but merely forward them down. It is good time to introduce some container component
+
+
 ## Library I can use today
 
  Ant Design of React - Ant Design
@@ -226,7 +238,7 @@ Immutable Store
     Hot Reloading
     Time-Travel debugging
 Small 2Ks
-    
+
 $ react-native install @shoutem/ui
 $ react-native install firebase
 $ react-native install moment
