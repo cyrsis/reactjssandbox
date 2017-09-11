@@ -248,6 +248,13 @@ $ react-native install redux-logger
 $ react-native install 
 $ react-native-keyboard-aware-scroll-view
 
+Steps to use reduex
+1.Add a constant to the constants file. Something like `const GREAT_COURSE = ‘GREAT_COURSE`
+
+2.Add an action creator to the actions folder. Return an action JavaScript object with a type of the constant you created.
+
+3.Add a reducer to the reducers folder that handles this action creato
+
 ## Clean npm
 
 ```bash
