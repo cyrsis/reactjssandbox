@@ -9,9 +9,16 @@ import {
 } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import { TodoForm, TodoList , Home , About, Topics } from "./components";
+import { TodoForm, TodoList, Home, About, Topics } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
 import { partial, pipe } from "./lib/utils";
+
+import {connect} from 'react-redux'
+import {bindActionCreators } from 'redux'
+import {addReminder} from "./actions/index";
+
+
+
 
 
 // ES5
@@ -33,7 +40,8 @@ class App extends Component {
             {id: 2, name: "Build Awesome Apps", isComplete: false},
             {id: 3, name: "Ship it", isComplete: false}
         ],
-        currentTodo: ''
+        currentTodo: '',
+        text:''
     }
     // constructor(props) {
     //     super(props);
@@ -81,8 +89,10 @@ class App extends Component {
 
     }
 
-
-
+     addReminder(){
+         console.log('this',this);
+         this.props.addReminder(this.state.text)
+     }
     render() {
         const submitHandler = this.state.currentTodo ? this.HandleSubmit : this.HandEmptySubmit;
         return (
@@ -106,8 +116,6 @@ class App extends Component {
                 </Router>
 
 
-
-
                 <div className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2>React Todos</h2>
@@ -125,10 +133,15 @@ class App extends Component {
 
                 <div className="form-inline">
                     <div className="form-group">
-                        <input type="text" className="form-control" placeholder="I have to..."/>
+                        <input type="text" className="form-control"
+                               placeholder="I have to..."
+                               onChange={event=> this.setState({text:event.target.value})}
+                        />
                         <button type="button"
-                        className="btn btn-success">
-                        Add Reminder
+                                className="btn btn-success"
+                                onClick={() => this.addReminder()}
+                        >
+                            Add Reminder
                         </button>
                     </div>
                 </div>
@@ -139,6 +152,11 @@ class App extends Component {
     }
 }
 
-export default App;
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({addReminder},dispatch);
+}
+
+
+export default connect(null,mapDispatchToProps)(App);
 //ES5
 //module.exports = MyComponent;

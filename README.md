@@ -113,9 +113,16 @@ bit.ly/react-define-component
 ## when Container?
 When you notice that some component doesnt use props they recieve but merely forward them down. It is good time to introduce some container component
 
+## Json Server
+```bash
+npm i -g json-server
+```
+
+```bash
+json-server -p 8080 --watch db.json
+```
 
 ## Library I can use today
-
  Ant Design of React - Ant Design
  TouchstoneJS - React.js powered UI framework for developing beautiful hybrid mobile apps.
  Elemental UI
