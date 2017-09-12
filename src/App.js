@@ -12,7 +12,6 @@ import './App.css';
 import { TodoForm, TodoList, Home, About, Topics } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
 import { partial, pipe } from "./lib/utils";
-import { Button } from 'react-bootstrap';
 
 import {connect} from 'react-redux'
 import {bindActionCreators } from 'redux'
@@ -60,8 +59,8 @@ class App extends Component {
 
     handleToggle = (id) => {
         const getUpdateTodos = pipe(findById, toggleTodo, partial(updateTodo, this.state.todos));
-        // const todo = findById(id, this.state.todos)
-        // const toggled = toggleTodo(todo)
+        const todo = findById(id, this.state.todos)
+        const toggled = toggleTodo(todo)
         const updatedTodos = getUpdateTodos(id, this.state.todos)
 
         this.setState({
@@ -97,17 +96,33 @@ class App extends Component {
     render() {
         const submitHandler = this.state.currentTodo ? this.HandleSubmit : this.HandEmptySubmit;
         return (
-
-
             <div className="App">
                 <Router>
                     <div>
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About</Link></li>
-                            <li><Link to="/topics">Topics</Link></li>
-                        </ul>
-
+                        <header>
+                            <div className="container header inner">
+                                <nav className="navbar">
+                                    <div className="container">
+                                        <div className="navbar-header">
+                                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                                <span className="icon-bar"></span>
+                                                <span className="icon-bar"></span>
+                                                <span className="icon-bar"></span>
+                                            </button>
+                                            <a className="navbar-brand" href="#">Company</a>
+                                        </div>
+                                        <div className="collapse navbar-collapse" id="myNavbar">
+                                            <ul className="nav navbar-nav navbar-right masthead-nav">
+                                                <li><Link to="/">Home</Link></li>
+                                                <li><Link to="/Todo">TodosPro</Link></li>
+                                                <li><Link to="/About">About</Link></li>
+                                                <li><Link to="/topics">Topics</Link></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </header>
                         <hr/>
 
                         <Route exact path="/" component={Home}/>
@@ -117,10 +132,7 @@ class App extends Component {
                 </Router>
 
 
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>React Todos</h2>
-                </div>
+
                 <div className="Todo-App">
                     {this.state.errorMessage && <span className='error'> {this.state.errorMessage}</span>}
                     <TodoForm
@@ -130,6 +142,7 @@ class App extends Component {
                         HandleSubmit={submitHandler}
                     />
                     <TodoList handleToggle={this.handleToggle} todos={this.state.todos}/>
+
                 </div>
 
                 <div className="form-inline">
@@ -146,6 +159,7 @@ class App extends Component {
                         </button>
                     </div>
                 </div>
+
 
 
             </div>

@@ -1,5 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { TodoItem } from "./TodoItem";
+
 
 //Stateless Components
 
@@ -16,8 +18,7 @@ export const TodoList = (props) =>  {
        </div>
    )
 }
-
 TodoList.propTypes ={
-  todos: React.PropTypes.array.isRequired
+  todos: PropTypes.array.isRequired
 }
 
