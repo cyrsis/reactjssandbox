@@ -7,7 +7,7 @@
 
 https://medium.com/@housecor
 
-## Package.config can do for uis is run task
+## Package.config can do for is is run task
 
 ## Note for barbel is that should not do multiple version at the same time
 
@@ -175,9 +175,9 @@ For the vailation
 ## Functiona Library
 (Partial function)
 Ramda (learn this first) http://ramdajs.com/0.17/docs/#partial
+
 Unders core
 http://underscorejs.org/#partial
-
 Lodash
 https://lodash.com/docs/4.17.4#partial
 
@@ -260,7 +260,7 @@ Steps to use reduex
 
 2.Add an action creator to the actions folder. Return an action JavaScript object with a type of the constant you created.
 
-3.Add a reducer to the reducers folder that handles this action creato
+3.Add a reducer to the reducers folder that handles this action creat
 
 ## Clean npm
 
