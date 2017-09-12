@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import { TodoForm, TodoList, Home, About, Topics } from "./components";
+import { TodoForm, TodoList, Home, About, Topics , Footer } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
 import { partial, pipe } from "./lib/utils";
 
@@ -109,12 +109,12 @@ class App extends Component {
                                                 <span className="icon-bar"></span>
                                                 <span className="icon-bar"></span>
                                             </button>
-                                            <a className="navbar-brand" href="#">Company</a>
+                                            <a className="navbar-brand" href="#">Onpaper</a>
                                         </div>
                                         <div className="collapse navbar-collapse" id="myNavbar">
                                             <ul className="nav navbar-nav navbar-right masthead-nav">
                                                 <li><Link to="/">Home</Link></li>
-                                                <li><Link to="/Todo">TodosPro</Link></li>
+                                                <li><Link to="/TodosPro">TodosPro</Link></li>
                                                 <li><Link to="/About">About</Link></li>
                                                 <li><Link to="/topics">Topics</Link></li>
                                             </ul>
@@ -128,6 +128,7 @@ class App extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route path="/about" component={About}/>
                         <Route path="/topics" component={Topics}/>
+                        {/*<Route path="/TodosPro" component={TodosPro}/>*/}
                     </div>
                 </Router>
 
@@ -161,7 +162,7 @@ class App extends Component {
                 </div>
 
 
-
+              <Footer/>
             </div>
         );
     }
