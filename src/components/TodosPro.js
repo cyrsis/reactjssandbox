@@ -3,10 +3,10 @@
 //var MyComponent = require('./MyComponent');
 import React, { Component } from 'react';
 import '../App.css';
-import { TodoForm, TodoList, Home, About, Topics } from ".";
-import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
-import { partial, pipe } from "./lib/utils";
-import {addReminder} from "./actions/index";
+import { TodoForm, TodoList} from ".";
+import { addTodo, findById, generatedId, toggleTodo, updateTodo} from "../lib/todoHelpers";
+import { partial, pipe } from "../lib/utils";
+
 
 // ES5
 // var Photo = React.createClass({
@@ -20,7 +20,7 @@ import {addReminder} from "./actions/index";
 // });
 // ReactDOM.render(<Photo />, document.getElementById('main'));
 
-class TodosPro extends Component {
+export default class TodosPro extends Component {
     state = {
         todos: [
             {id: 1, name: "Learn Jsx", isComplete: true},
@@ -46,8 +46,8 @@ class TodosPro extends Component {
 
     handleToggle = (id) => {
         const getUpdateTodos = pipe(findById, toggleTodo, partial(updateTodo, this.state.todos));
-        const todo = findById(id, this.state.todos)
-        const toggled = toggleTodo(todo)
+        // const todo = findById(id, this.state.todos)
+        // const toggled = toggleTodo(todo)
         const updatedTodos = getUpdateTodos(id, this.state.todos)
 
         this.setState({
@@ -98,4 +98,4 @@ class TodosPro extends Component {
     }
 }
 
-export default TodosPro;
+

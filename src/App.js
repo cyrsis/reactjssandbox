@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import TodosPro from './components/TodosPro'
 import { TodoForm, TodoList, Home, About, Topics , Footer } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
 import { partial, pipe } from "./lib/utils";
@@ -128,23 +129,12 @@ class App extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route path="/about" component={About}/>
                         <Route path="/topics" component={Topics}/>
-                        {/*<Route path="/TodosPro" component={TodosPro}/>*/}
+                        <Route path="/TodosPro" component={TodosPro}/>
                     </div>
                 </Router>
 
 
 
-                <div className="Todo-App">
-                    {this.state.errorMessage && <span className='error'> {this.state.errorMessage}</span>}
-                    <TodoForm
-                        HandleInputChange={this.HandleInputChange}
-                        currentTodo={this.state.currentTodo}
-
-                        HandleSubmit={submitHandler}
-                    />
-                    <TodoList handleToggle={this.handleToggle} todos={this.state.todos}/>
-
-                </div>
 
                 <div className="form-inline">
                     <div className="form-group">
