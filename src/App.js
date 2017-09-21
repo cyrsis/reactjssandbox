@@ -9,17 +9,14 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import TodosPro from './components/TodosPro'
-import { Home, About, Topics , Footer, PropsDemo , InlineDemo } from "./components";
+import { Home, About, Topics, Footer, PropsDemo, InlineDemo } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
 import { partial, pipe } from "./lib/utils";
 
-import {connect} from 'react-redux'
-import {bindActionCreators } from 'redux'
-import {addReminder} from "./actions/index";
-
-
-
-
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { addReminder } from "./actions/index";
+import {NoteWithFirebaseStatic} from "./components/NoteWithFirebase/NoteWithFirebaseStatic";
 
 
 // ES5
@@ -42,7 +39,7 @@ class App extends Component {
             {id: 3, name: "Ship it", isComplete: false}
         ],
         currentTodo: '',
-        text:''
+        text: ''
     }
     // constructor(props) {
     //     super(props);
@@ -90,12 +87,13 @@ class App extends Component {
 
     }
 
-     addReminder(){
-         console.log('this',this);
-         this.props.addReminder(this.state.text)
-     }
+    addReminder() {
+        console.log('this', this);
+        this.props.addReminder(this.state.text)
+    }
+
     render() {
-        const submitHandler = this.state.currentTodo ? this.HandleSubmit : this.HandEmptySubmit;
+
         return (
             <div className="App">
                 <Router>
@@ -105,7 +103,9 @@ class App extends Component {
                                 <nav className="navbar">
                                     <div className="container">
                                         <div className="navbar-header">
-                                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                            <button type="button" className="navbar-toggle" data-toggle="collapse"
+                                                    data-target="#myNavbar">
+                                                <span className="icon-bar"></span>
                                                 <span className="icon-bar"></span>
                                                 <span className="icon-bar"></span>
                                                 <span className="icon-bar"></span>
@@ -120,7 +120,7 @@ class App extends Component {
                                                 <li><Link to="/PropsDemo">PropsDemo</Link></li>
                                                 <li><Link to="/TodosPro">TodosPro</Link></li>
                                                 <li><Link to="/InlineDemo">InlineDemo</Link></li>
-                                                <li><Link to="/About">About</Link></li>
+                                                <li><Link to="/NoteWithFirebase">NoteWithFirebase</Link></li>
                                                 <li><Link to="/topics">Topics</Link></li>
                                             </ul>
                                         </div>
@@ -133,29 +133,24 @@ class App extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route path="/PropsDemo" component={PropsDemo}/>
                         <Route path="/InlineDemo" component={InlineDemo}/>
-                        <Route path="/about" component={About}/>
+                        <Route path="/NoteWithFirebase" component={NoteWithFirebaseStatic}/>
                         <Route path="/topics" component={Topics}/>
                         <Route path="/TodosPro" component={TodosPro}/>
                     </div>
                 </Router>
 
 
-
-
-
-
-
-              <Footer/>
+                <Footer/>
             </div>
         );
     }
 }
 
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({addReminder},dispatch);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({addReminder}, dispatch);
 }
 
 
-export default connect(null,mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
 //ES5
 //module.exports = MyComponent;
