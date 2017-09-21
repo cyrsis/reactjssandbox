@@ -5,3 +5,6 @@ export {About} from './About'
 export {Topics} from './Topics'
 export {Footer} from './Footer'
 export {TodosPro} from './TodosPro'
+export {PropsDemo} from './PropsDemo'
+export {InlineDemo} from './InlineDemo'
+

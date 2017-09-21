@@ -7,16 +7,16 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import TodosPro from './components/TodosPro'
-import { TodoForm, TodoList, Home, About, Topics , Footer } from "./components";
+import { Home, About, Topics , Footer, PropsDemo , InlineDemo } from "./components";
 import { addTodo, findById, generatedId, toggleTodo, updateTodo, removeTodo } from "./lib/todoHelpers";
 import { partial, pipe } from "./lib/utils";
 
 import {connect} from 'react-redux'
 import {bindActionCreators } from 'redux'
 import {addReminder} from "./actions/index";
+
 
 
 
@@ -109,13 +109,17 @@ class App extends Component {
                                                 <span className="icon-bar"></span>
                                                 <span className="icon-bar"></span>
                                                 <span className="icon-bar"></span>
+                                                <span className="icon-bar"></span>
+                                                <span className="icon-bar"></span>
                                             </button>
                                             <a className="navbar-brand" href="#">Onpaper</a>
                                         </div>
                                         <div className="collapse navbar-collapse" id="myNavbar">
                                             <ul className="nav navbar-nav navbar-right masthead-nav">
                                                 <li><Link to="/">Home</Link></li>
+                                                <li><Link to="/PropsDemo">PropsDemo</Link></li>
                                                 <li><Link to="/TodosPro">TodosPro</Link></li>
+                                                <li><Link to="/InlineDemo">InlineDemo</Link></li>
                                                 <li><Link to="/About">About</Link></li>
                                                 <li><Link to="/topics">Topics</Link></li>
                                             </ul>
@@ -127,6 +131,8 @@ class App extends Component {
                         <hr/>
 
                         <Route exact path="/" component={Home}/>
+                        <Route path="/PropsDemo" component={PropsDemo}/>
+                        <Route path="/InlineDemo" component={InlineDemo}/>
                         <Route path="/about" component={About}/>
                         <Route path="/topics" component={Topics}/>
                         <Route path="/TodosPro" component={TodosPro}/>
@@ -136,20 +142,7 @@ class App extends Component {
 
 
 
-                <div className="form-inline">
-                    <div className="form-group">
-                        <input type="text" className="form-control"
-                               placeholder="I have to..."
-                               onChange={event=> this.setState({text:event.target.value})}
-                        />
-                        <button type="button"
-                                className="btn btn-success"
-                                onClick={() => this.addReminder()}
-                        >
-                            Add Reminder
-                        </button>
-                    </div>
-                </div>
+
 
 
               <Footer/>
