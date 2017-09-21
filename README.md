@@ -1,7 +1,11 @@
 
 
 ## To do
-1. Work on the Router 
+1. Work on the Router -- Done
+2. Work with Firebase -- Done
+3. Work with Design Pattern
+https://github.com/mannyhenri/react-patterns
+
 
 ## This guy is perfect
 

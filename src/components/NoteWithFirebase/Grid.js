@@ -22,10 +22,13 @@ export default class Grid extends React.Component {
     }
     render() {
         return (
+            <div>
+            <p>Grid is here</p>
             <div className="row">
                 <ul>
                     {this.renderItems()}
                 </ul>
+            </div>
             </div>
         );
     }
