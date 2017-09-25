@@ -18,6 +18,7 @@ import { bindActionCreators } from 'redux'
 import { addReminder } from "./actions/index";
 import {NoteWithFirebaseStatic} from "./components/NoteWithFirebase/NoteWithFirebaseStatic";
 import PokeDashBoard from "./components/PokeApi/PokeDashBoard";
+import {CountDown} from './components/CountDown/CountDown'
 
 
 // ES5
@@ -119,6 +120,7 @@ class App extends Component {
                                             <ul className="nav navbar-nav navbar-right masthead-nav">
                                                 <li><Link to="/">Home</Link></li>
                                                 <li><Link to="/PropsDemo">PropsDemo</Link></li>
+                                                <li><Link to="/CountDown">CountDown</Link></li>
                                                 <li><Link to="/TodosPro">TodosPro</Link></li>
                                                 <li><Link to="/InlineDemo">InlineDemo</Link></li>
                                                 <li><Link to="/NoteWithFirebase">NoteWithFirebase</Link></li>
@@ -134,6 +136,7 @@ class App extends Component {
 
                         <Route exact path="/" component={Home}/>
                         <Route path="/PropsDemo" component={PropsDemo}/>
+                        <Route path="/CountDown" component={CountDown}/>
                         <Route path="/InlineDemo" component={InlineDemo}/>
                         <Route path="/NoteWithFirebase" component={NoteWithFirebaseStatic}/>
                         <Route path="/PokeDashBoard" component={PokeDashBoard}/>

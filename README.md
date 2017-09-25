@@ -1,3 +1,14 @@
+##Mobx 
+react-native init ReactNativeMobX
+npm i mobx mobx-react --save
+npm i babel-plugin-transform-decorators-legacy --save-dev
+
+.babelrc
+{
+ 'presets': ['react-native'],
+ 'plugins': ['transform-decorators-legacy']
+}
+
 
 
 ## To do
@@ -128,7 +139,7 @@ json-server -p 8080 --watch db.json
 
 ## Library I can use today
  Ant Design of React - Ant Design
- TouchstoneJS - React.js powered UI framework for developing beautiful hybrid mobile apps.
+ TouchstoneJS - React.js powered UI framework for developing beautiful hybrid mob#3 Mobile apps.
  Elemental UI
  RSuite | 一个基于 React.js 的 Web 组件库
  Material-UI
