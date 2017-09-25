@@ -17,6 +17,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addReminder } from "./actions/index";
 import {NoteWithFirebaseStatic} from "./components/NoteWithFirebase/NoteWithFirebaseStatic";
+import PokeDashBoard from "./components/PokeApi/PokeDashBoard";
 
 
 // ES5
@@ -121,6 +122,7 @@ class App extends Component {
                                                 <li><Link to="/TodosPro">TodosPro</Link></li>
                                                 <li><Link to="/InlineDemo">InlineDemo</Link></li>
                                                 <li><Link to="/NoteWithFirebase">NoteWithFirebase</Link></li>
+                                                <li><Link to="/PokeDashBoard">PokeDashBoard</Link></li>
                                                 <li><Link to="/topics">Topics</Link></li>
                                             </ul>
                                         </div>
@@ -134,6 +136,7 @@ class App extends Component {
                         <Route path="/PropsDemo" component={PropsDemo}/>
                         <Route path="/InlineDemo" component={InlineDemo}/>
                         <Route path="/NoteWithFirebase" component={NoteWithFirebaseStatic}/>
+                        <Route path="/PokeDashBoard" component={PokeDashBoard}/>
                         <Route path="/topics" component={Topics}/>
                         <Route path="/TodosPro" component={TodosPro}/>
                     </div>
