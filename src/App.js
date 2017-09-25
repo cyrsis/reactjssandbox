@@ -19,6 +19,7 @@ import { addReminder } from "./actions/index";
 import {NoteWithFirebaseStatic} from "./components/NoteWithFirebase/NoteWithFirebaseStatic";
 import PokeDashBoard from "./components/PokeApi/PokeDashBoard";
 import {CountDown} from './components/CountDown/CountDown'
+import {Whoops404} from './components/Whoops404'
 
 
 // ES5
@@ -142,6 +143,7 @@ class App extends Component {
                         <Route path="/PokeDashBoard" component={PokeDashBoard}/>
                         <Route path="/topics" component={Topics}/>
                         <Route path="/TodosPro" component={TodosPro}/>
+                        <Route path="*" component={Whoops404} />
                     </div>
                 </Router>
 
