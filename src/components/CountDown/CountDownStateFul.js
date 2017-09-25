@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../App.css'
 import { Clock } from "./Clock";
-import {Form, FormControl , Button} from 'react-bootstrap';
+import { Form, FormControl, Button } from 'react-bootstrap';
 
 class CountDownStateFul extends Component {
 
@@ -9,9 +9,10 @@ class CountDownStateFul extends Component {
         super(props);
         this.state = {
             deadline: 'December 25, 2017',
-            newDeadline : ''
+            newDeadline: ''
         }
     }
+
     render() {
         return (
             <div>
@@ -22,18 +23,27 @@ class CountDownStateFul extends Component {
                     </div>
                     <Clock deadline={this.state.deadline}/>
                     <Form inline>
-                         <FormControl className="Deadline-input"
-                         placeholder = 'new date'
-                                      onChange={event=> this.setState({newDeadline: event.targe.value})}
+                        <FormControl className="Deadline-input"
+                                     placeholder='new date'
+                                     onChange={event => this.setState({newDeadline: event.target.value})}
 
-                         />
+                        />
+                        <Button onClick={()=>this.changeDeadline()}>
+                            Submit
+                        </Button>
                     </Form>
-
 
 
                 </div>
             </div>
         );
+    }
+
+    changeDeadline() {
+        this.setState({
+            deadline:this.state.newDeadline,
+        });
+
     }
 }
 
