@@ -20,6 +20,7 @@ import {NoteWithFirebaseStatic} from "./components/NoteWithFirebase/NoteWithFire
 import PokeDashBoard from "./components/PokeApi/PokeDashBoard";
 import {CountDown} from './components/CountDown/CountDown'
 import {Whoops404} from './components/Whoops404'
+import { ChatStateless } from "./components/ChatMobx/ChatStateless";
 
 
 // ES5
@@ -126,6 +127,7 @@ class App extends Component {
                                                 <li><Link to="/InlineDemo">InlineDemo</Link></li>
                                                 <li><Link to="/NoteWithFirebase">NoteWithFirebase</Link></li>
                                                 <li><Link to="/PokeDashBoard">PokeDashBoard</Link></li>
+                                                <li><Link to="/ChatApp">ChatApp</Link></li>
                                                 <li><Link to="/topics">Topics</Link></li>
                                             </ul>
                                         </div>
@@ -141,6 +143,7 @@ class App extends Component {
                         <Route path="/InlineDemo" component={InlineDemo}/>
                         <Route path="/NoteWithFirebase" component={NoteWithFirebaseStatic}/>
                         <Route path="/PokeDashBoard" component={PokeDashBoard}/>
+                        <Route path="/ChatApp" component={ChatStateless}/>
                         <Route path="/topics" component={Topics}/>
                         <Route path="/TodosPro" component={TodosPro}/>
                         <Route path="*" component={Whoops404} />
