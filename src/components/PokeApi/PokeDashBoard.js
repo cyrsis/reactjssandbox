@@ -17,7 +17,8 @@ class PokeDashBoard extends Component {
       fetch(baseUrl).then(response => {
           return response.json();
       }).then((json) => {
-          console.log('parsed json', json)
+          console
+              .log('parsed json', json)
       }).then((error) => {
           console.log('Error',error)
       })
