@@ -1,4 +1,6 @@
-##Mobx 
+## Future working on
+https://react.rocks/tag/Visualization
+
 react-native init ReactNativeMobX
 npm i mobx mobx-react --save
 npm i babel-plugin-transform-decorators-legacy --save-dev
@@ -14,7 +16,7 @@ npm i babel-plugin-transform-decorators-legacy --save-dev
 ## To do
 1. Work on the Router -- Done
 2. Work with Firebase -- Done
-3. Work with Design Pattern
+3. Work with Design Pattern - Done
 https://github.com/mannyhenri/react-patterns
 
 
