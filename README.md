@@ -1,3 +1,6 @@
+#Mirco Animation
+
+npm install --save material-ui react-tap-event-plugin
 ## Work on it tomorrow
 
 https://github.com/lemonnoodle/react-mobx-dashboard
