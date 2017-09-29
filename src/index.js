@@ -16,11 +16,13 @@ import registerServiceWorker from './registerServiceWorker';
 const store = createStore(reducer);
 //To test out some javascript from example dir
 //import {constAndLet} from "./examples/constAndLet";
-
+const config = {
+    databaseURL: 'https://onpaper-9c248.firebaseio.com',
+};
 //constAndLet(); //use to test out function, this is great for testing
 ReactDOM.render(
     <Provider store={store}>
-    <App />
+    <App config={config} />
     </Provider>
     , document.getElementById('root'));
 registerServiceWorker();

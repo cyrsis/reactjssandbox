@@ -1,7 +1,7 @@
 import Firebase from 'firebase';
 import MobxFirebaseStore from 'mobx-firebase-store';
 
-const tweets_subkey = 'todos';
+const tweets_subkey = 'tweets';
 
 export default class TweetStore extends MobxFirebaseStore {
 
