@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/react": "^16.0.7",
-    "antd": "^2.13.3",
+    "@types/react": "^16.0.9",
+    "antd": "^2.13.4",
     "chance": "^1.0.11",
     "es6-promise": "^4.1.1",
-    "firebase": "^4.4.0",
+    "firebase": "^4.5.0",
     "firebase-nest": "^0.7.1",
-    "immutable": "^3.8.1",
+    "immutable": "^3.8.2",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
-    "material-ui": "^0.19.2",
+    "material-ui": "^0.19.3",
     "mobx": "^3.3.0",
     "mobx-firebase-store": "^1.2.1",
     "mobx-react": "^4.3.3",
@@ -44,7 +44,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint": "^4.7.2",
+    "eslint": "^4.8.0",
     "eslint-config-airbnb": "^15.1.0"
   }
 }

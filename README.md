@@ -1,3 +1,6 @@
+#Work on this tonight
+
+https://github.com/mingzilla/react-mobx-firebase-boilerplate/blob/master/src/store/todos/todos.js
 #Mirco Animation
 
 npm install --save material-ui react-tap-event-plugin
