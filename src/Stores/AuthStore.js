@@ -1,7 +1,6 @@
 
 import firebase from 'firebase';
-
-import { observable } from 'mobx';
+import { observable , action } from 'mobx';
 
 export default class AuthStore {
     constructor(fbApp) {
@@ -25,6 +24,7 @@ export default class AuthStore {
             this.unwatchAuth();
         }
     }
+
 
     signIn({email, password}) {
         return firebase.auth(this.fbApp).signInWithEmailAndPassword(email, password);
