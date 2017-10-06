@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { observer } from 'mobx-react';
 import { createAutoSubscriber } from 'firebase-nest';
 import Chance from 'chance';

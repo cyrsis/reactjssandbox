@@ -17,7 +17,6 @@ export default class TweeterStateful extends Component {
                 <div className="flex one center">
                     <div className="third-800">
                         <h1>MobX-Firebase Twitter Clone</h1>
-
                         <TweetList store={this.store} />
                     </div>
                 </div>
