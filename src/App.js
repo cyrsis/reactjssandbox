@@ -30,8 +30,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.stores = {
-            chatStore: new ChatStore(props.fbApp),
-            authStore: new AuthStore(props.fbApp)
+            chatStore: new ChatStore(fbApp),
+            authStore: new AuthStore(fbApp)
         }
         this.subscribeSubs = this.stores.chatStore.subscribeSubs.bind(this.stores.chatStore);
     }
