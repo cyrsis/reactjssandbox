@@ -1,37 +1,19 @@
+//Divide by 3, would say fizz
+//Divide by 5, would say Buzz
+//Divide by 3 and 5 , would say fizzbuzz
+//use of "%" operator
+function fizzBuzz(num) {
+  for (var i = 1; i<= num; i++);
+  {
 
-const pi = Math.pi
+      if (i%15 === 0) console.log("fizzBuzz") ;
+      else if (i %3 ===0 ) console.log("fizz") ;
+      else if (i %5 ===0 ) console.log("buzz") ;
+      else console.log(i)
+  }
 
-const multiply = (n,m) => n*m;
-
-const dividw = (a,b) =>  a/b;
-
-const sum=(c, d) => c + d;
-
-const square = (x) => x*x;
-
-const double = (x) => x*2;
-
-const Triple = (x) => x * 3;
-
-
-
-console.log(sum(2,3))
-
-function getDimens(heightSel,diamSel) {
-    return function impureDimens() {
-        const height = Document.querySelector(heightSel);
-        const diameter = Document.querySelector(diamSel);
-
-        if (!diameter||!height) {
-            return void(0);
-        }
-
-        return [height.value,diameter.value]
-    }
 }
 
-//Pure - Only return a function
-const dimes = getDimens(".height",'.diameter-bad');
+fizzBuzz(20)
 
-//Impure , Excute the function
-const result = dimes();
+//Expected results

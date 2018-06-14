@@ -35,7 +35,8 @@
     "redux-saga": "^0.15.6",
     "redux-thunk": "^2.2.0",
     "slugify": "^1.2.1",
-    "twitter-text": "^1.14.7"
+    "twitter-text": "^1.14.7",
+    "rxjs": "^6.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
