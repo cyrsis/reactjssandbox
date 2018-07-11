@@ -2,9 +2,13 @@
 
 //Only error in ES6
 if (true) {
-    let aName = 'name'
+    let aName = 'letname'
+    var name ='varname'
+
 }
 console.log(aName);
+console.log(varname);
+
 
 
 
