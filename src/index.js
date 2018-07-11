@@ -7,8 +7,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {Provider} from 'react-redux'
-import {createStore} from 'redux';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
 import reducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -22,7 +22,7 @@ const config = {
 //constAndLet(); //use to test out function, this is great for testing
 ReactDOM.render(
     <Provider store={store}>
-    <App config={config} />
+        <App config={config}/>
     </Provider>
     , document.getElementById('root'));
 registerServiceWorker();

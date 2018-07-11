@@ -18,7 +18,7 @@ const apiKey = 'AIzaSyBQ6FZfyzpyICkXTf60o3TU3H39DkWJCq4'
 //     storageBucket: "onpaper-9c248.appspot.com",
 //     messagingSenderId: "665577702717"
 
-const fbApp = firebase.initializeApp({
+var fbApp = firebase.initializeApp({
     apiKey,
     authDomain: "onpaper-9c248.firebaseapp.com",
     databaseURL: 'https://onpaper-9c248.firebaseio.com',
