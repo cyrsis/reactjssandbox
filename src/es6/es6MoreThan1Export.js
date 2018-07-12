@@ -10,4 +10,6 @@ function otherStaff()
 exports.doStaff = doStaff
 exports.otherStaff = otherStaff
 
+
+otherStaff()
 //This is ES6 ->
